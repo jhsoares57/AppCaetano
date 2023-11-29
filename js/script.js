@@ -24,7 +24,7 @@ function adicionaLinha(idTabela) {
     celula4.innerHTML =  repeticoes; 
     celula5.innerHTML =  intervalo; 
     celula6.innerHTML =  obs; 
-    celula7.innerHTML =  "<button onclick='removeLinha(this)'>Remover</button>";
+    celula7.innerHTML =  "<button onclick='removeLinha(this)'>-</button>";
 }
 
 // funcao remove uma linha da tabela
