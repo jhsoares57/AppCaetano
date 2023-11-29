@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="signup-form">
+                    <div  class="mt-5 border p-4 bg-light shadow">
+                        <h4 class="mb-5 text-secondary">Ficha de treino</h4>
+                        <div class="row">
+                            <div class="mb-3 col-md-6">
+                                <label>Nome do aluno</label>
+                                <input type="text" name="iNome" id="iNome" class="form-control" placeholder="Nome do aluno...">
+                            </div>
+    
+                            <div class="mb-3 col-md-6">
+                                <label>Tipo do treinamento</label>
+                                <input type="text" name="iTipoTreino" id="iTipoTreino" class="form-control" placeholder="Tipo do treinamento...">
+                            </div>
+    
+                            <div class="mb-3 col-md-6">
+                                <label>Objetivo geral</label>
+                                <input type="text" name="iObjgeral" id="iObjgeral" class="form-control" placeholder="Objetivo geral...">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label>Valido até</label>
+                                <input type="date" name="iVigencia" id="iVigencia" class="form-control" placeholder="Período de vigência...">
+                            </div>
+                            <div class="mb-3 col-md-12">
+                                <label>Divisão de treinamento</label>
+                                <input type="text" name="iDivTreinamento" id="iDivTreinamento" class="form-control" placeholder="Divisão de treinamento...">
+                            </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-primary float-end" onclick="dadosAluno()">Salvar Aluno</button>
+                             </div>
+                             <br/>
+                             <br/>
+                            <hr>
+                            <div class="mb-3 col-md-6">
+                                <label>Músculo</label>
+                                <input type="text" name="musculo" id="musculo" class="form-control" placeholder="Músculo...">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label>Técnica</label>
+                                <input type="text" name="tecnica" id="tecnica" class="form-control" placeholder="Técnica...">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label>Séries</label>
+                                <input type="text" name="series" id="series" class="form-control" placeholder="Séries...">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label>Repetições</label>
+                                <input type="text" name="Repeticoes" id="repeticoes" class="form-control" placeholder="Repetições...">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label>Intervalo</label>
+                                <input type="text" name="Intervalo" id="intervalo" class="form-control" placeholder="Intervalo...">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label>Observações</label>
+                                <input type="text" name="obs" id="obs" class="form-control" placeholder="Observações...">
+                            </div>
+                            <div class="col-md-12">
+                               <button class="btn btn-primary float-end" onclick="adicionaLinha('tbl')">Salvar Treino</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <p class="text-center mt-3 text-secondary">If you have account, Please <a href="#">Login Now</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 offset-md-0">
+                <div class="signup-form">
+                    <div  class="mt-5 border p-6 bg-light shadow">
+                        <div class="col-md-6">
+                            <button class="btn btn-primary float-end" onclick="imprimir()">imprimir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    </div>
+    <div id="Imprimir">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 offset-md-0">
+                    <div class="signup-form">
+                        <div  class="mt-8 border p-4 bg-light shadow">
+                            <h4 class="mb-8 text-secondary">Ficha de treino</h4>
+                            <div id="dadosAluno">
+                                <br/>
+                                <label id="Aluno"></label>
+                                <br/>
+                                <label id="TipoTreino"></label>
+                                <br/>
+                                <label id="Objgeral"></label>
+                                <br/>
+                                <label id="vigencia"></label>
+                                <br/>
+                                <label id="divTreinamento"></label>
+                            </div>
+                            <table id="tbl" class="table table-bordered">
+                                <tr>
+                                <td>Músculo</td>
+                                <td>Técnica</td>
+                                <td>Séries</td>
+                                <td>Repetições</td>
+                                <td>Intervalo</td>
+                                <td>Observações</td>
+                                <td></td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>     
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
