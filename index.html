@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Ficha de Treino</title>
 </head>
 <body>
     <div class="container">
@@ -43,6 +43,10 @@
                              <br/>
                              <br/>
                             <hr>
+                            <div class="mb-3 col-md-12">
+                                <label>Exercício</label>
+                                <input type="text" name="exercicio" id="exercicio" class="form-control" placeholder="Exercício...">
+                            </div>
                             <div class="mb-3 col-md-6">
                                 <label>Músculo</label>
                                 <input type="text" name="musculo" id="musculo" class="form-control" placeholder="Músculo...">
@@ -92,14 +96,16 @@
         </div>
      </div>
     </div>
-    <div id="Imprimir">
+    <div id="DivImprimir">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 offset-md-0">
                     <div class="signup-form">
                         <div  class="mt-8 border p-4 bg-light shadow">
                             <h4 class="mb-8 text-secondary">Ficha de treino</h4>
-                            <div id="dadosAluno">
+                            <div class="row">
+                            <div class="mb-3  col-md-8" id="dadosAluno">
+                                <p>
                                 <br/>
                                 <label id="Aluno"></label>
                                 <br/>
@@ -111,17 +117,22 @@
                                 <br/>
                                 <label id="divTreinamento"></label>
                             </div>
-                            <table id="tbl" class="table table-bordered">
+                            <div class="mb-3  col-md-4" >
+                                <img src="img/Caetano.jpg" width="300" height="300"/>
+                            </div>
+                            <table id="tbl" border="1">
                                 <tr>
-                                <td>Músculo</td>
-                                <td>Técnica</td>
-                                <td>Séries</td>
-                                <td>Repetições</td>
-                                <td>Intervalo</td>
-                                <td>Observações</td>
-                                <td></td>
+                                    <td style="width: 150px;">Exercício</td>
+                                    <td style="width: 150px;">Músculo</td>
+                                    <td style="width: 150px;">Técnica</td>
+                                    <td style="width: 150px;">Séries</td>
+                                    <td style="width: 150px;">Repetições</td>
+                                    <td style="width: 150px;">Intervalo</td>
+                                    <td style="width: 150px;">Observações</td>
+                                    <!-- <td></td> -->
                                 </tr>
-                            </table>    
+                            </table>   
+                        </div> 
                         </div>
                     </div>
                 </div>

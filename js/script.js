@@ -10,7 +10,9 @@ function adicionaLinha(idTabela) {
     var celula5 = linha.insertCell(4); 
     var celula6 = linha.insertCell(5); 
     var celula7 = linha.insertCell(6); 
+    var celula8 = linha.insertCell(7);
 
+    var exercicio =  document.getElementById('exercicio').value;
     var musculo =  document.getElementById('musculo').value;
     var tecnica =  document.getElementById('tecnica').value;
     var series =  document.getElementById('series').value;
@@ -18,13 +20,14 @@ function adicionaLinha(idTabela) {
     var intervalo =  document.getElementById('intervalo').value;
     var obs =  document.getElementById('obs').value;
 
-    celula1.innerHTML = musculo; 
-    celula2.innerHTML =  tecnica; 
-    celula3.innerHTML =  series; 
-    celula4.innerHTML =  repeticoes; 
-    celula5.innerHTML =  intervalo; 
-    celula6.innerHTML =  obs; 
-    celula7.innerHTML =  "<button onclick='removeLinha(this)'>-</button>";
+    celula1.innerHTML =  exercicio; 
+    celula2.innerHTML =  musculo; 
+    celula3.innerHTML =  tecnica; 
+    celula4.innerHTML =  series; 
+    celula5.innerHTML =  repeticoes; 
+    celula6.innerHTML =  intervalo; 
+    celula7.innerHTML =  obs;
+    celula8.innerHTML =  "<button onclick='removeLinha(this)'>-</button>";
 }
 
 // funcao remove uma linha da tabela
@@ -53,7 +56,7 @@ function dadosAluno(){
   };
 
   function imprimir(){
-    var conteudo = document.getElementById('Imprimir').innerHTML,
+    var conteudo = document.getElementById('DivImprimir').innerHTML,
     tela_impressao = window.open('about:blank');
  
     tela_impressao.document.write('<!DOCTYPE html>');
@@ -63,11 +66,11 @@ function dadosAluno(){
     tela_impressao.document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
     tela_impressao.document.write('<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">');
     tela_impressao.document.write('<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>');
-    tela_impressao.document.write('<title>Document</title>');
+    tela_impressao.document.write('<title>Ficha de Treino</title>');
     tela_impressao.document.write('</head>');
     tela_impressao.document.write('<body>');
     tela_impressao.document.write(conteudo);
     tela_impressao.document.write('</body></html>');
-    tela_impressao.window.print();
-    tela_impressao.window.close();
+    // tela_impressao.window.print();
+    // tela_impressao.window.close();
   }
